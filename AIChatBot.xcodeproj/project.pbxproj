@@ -16,6 +16,8 @@
 		209E0B2E27873E51009E10D9 /* AIChatBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E0B2D27873E51009E10D9 /* AIChatBotTests.swift */; };
 		209E0B3827873E51009E10D9 /* AIChatBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E0B3727873E51009E10D9 /* AIChatBotUITests.swift */; };
 		209E0B3A27873E51009E10D9 /* AIChatBotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E0B3927873E51009E10D9 /* AIChatBotUITestsLaunchTests.swift */; };
+		EE7B2A0B278C8EE30058AC7A /* UIViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B2A0A278C8EE30058AC7A /* UIViewController2.swift */; };
+		EE7B2A0F278C92C20058AC7A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B2A0E278C92C20058AC7A /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		209E0B3327873E51009E10D9 /* AIChatBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		209E0B3727873E51009E10D9 /* AIChatBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatBotUITests.swift; sourceTree = "<group>"; };
 		209E0B3927873E51009E10D9 /* AIChatBotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatBotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE7B2A0A278C8EE30058AC7A /* UIViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController2.swift; sourceTree = "<group>"; };
+		EE7B2A0E278C92C20058AC7A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				209E0B1827873E4E009E10D9 /* SceneDelegate.swift */,
 				209E0B1A27873E4E009E10D9 /* ViewController.swift */,
 				209E0B1C27873E4E009E10D9 /* Main.storyboard */,
+				EE7B2A0E278C92C20058AC7A /* CustomCell.swift */,
+				EE7B2A0A278C8EE30058AC7A /* UIViewController2.swift */,
 				209E0B1F27873E50009E10D9 /* Assets.xcassets */,
 				209E0B2127873E50009E10D9 /* LaunchScreen.storyboard */,
 				209E0B2427873E50009E10D9 /* Info.plist */,
@@ -259,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				209E0B1B27873E4E009E10D9 /* ViewController.swift in Sources */,
+				EE7B2A0B278C8EE30058AC7A /* UIViewController2.swift in Sources */,
+				EE7B2A0F278C92C20058AC7A /* CustomCell.swift in Sources */,
 				209E0B1727873E4E009E10D9 /* AppDelegate.swift in Sources */,
 				209E0B1927873E4E009E10D9 /* SceneDelegate.swift in Sources */,
 			);

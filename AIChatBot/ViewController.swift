@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     func filterResponse(response: String) {
         wordArray = []
-        
+        response = response.lowercased() //all lowercase response
         if check(response: response) == true {
             
         }
