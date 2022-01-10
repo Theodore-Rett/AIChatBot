@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20838035278C8DF300FEB3F8 /* ConversationTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20838034278C8DF300FEB3F8 /* ConversationTopics.swift */; };
 		209E0B1727873E4E009E10D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E0B1627873E4E009E10D9 /* AppDelegate.swift */; };
 		209E0B1927873E4E009E10D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E0B1827873E4E009E10D9 /* SceneDelegate.swift */; };
 		209E0B1B27873E4E009E10D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209E0B1A27873E4E009E10D9 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20838034278C8DF300FEB3F8 /* ConversationTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTopics.swift; sourceTree = "<group>"; };
 		209E0B1327873E4E009E10D9 /* AIChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		209E0B1627873E4E009E10D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		209E0B1827873E4E009E10D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20838035278C8DF300FEB3F8 /* ConversationTopics.swift in Sources */,
 				209E0B1B27873E4E009E10D9 /* ViewController.swift in Sources */,
 				EE7B2A0B278C8EE30058AC7A /* UIViewController2.swift in Sources */,
 				EE7B2A0F278C92C20058AC7A /* CustomCell.swift in Sources */,
