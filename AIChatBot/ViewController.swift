@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var responseOutlet: UITextField!
-    var wordArray: [String] = []
+    var wordArray: [Substring] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,20 +18,61 @@ class ViewController: UIViewController {
     }
 
     
-    func filterResponse(response: String) {
-      var temp = response
-        
-        if let wordInd = temp.firstIndex(of: " ") {
-        var wordIndAfter = temp.index(after: wordInd)
-            wordArray.append(temp[...wordIndAfter])
-            temp = temp[wordInd...]
-        } else { //let newStr = str[..<index]
-            print("no spaces in string")
-        }
-      
-        
+    
+    @IBAction func sendAction(_ sender: UIButton) {
+        if let response = responseOutlet.text {
+    filterResponse(response: response)
+        } //only runs of there is something in the outlet
+        responseOutlet.text = ""
     }
     
+    
+    
+    func filterResponse(response: String) {
+        wordArray = []
+        
+        if check(response: response) == true {
+            
+        }
+        
+        let temp = response
+        var subTemp: Substring = "" //cuts off the previous word it just stored into wordarray
+        
+        if let wordInd = temp.firstIndex(of: " ") {
+        let wordIndAfter = temp.index(after: wordInd)
+        let wordIndBefore = temp.index(before: wordInd)
+        wordArray.append(temp[...wordIndBefore])
+            subTemp = temp[wordIndAfter...]
+            
+            repeat {
+               if let wordInd = subTemp.firstIndex(of: " ") {
+               let wordIndAfter = subTemp.index(after: wordInd)
+               let wordIndBefore = temp.index(before: wordInd)
+               wordArray.append(subTemp[...wordIndBefore])
+                   subTemp = temp[wordIndAfter...]
+               } else {
+                   print("no spaces in string")
+               }
+                
+            }while(subTemp.firstIndex(of: " ") != nil);
+            let afterEnd = subTemp.endIndex
+            let endInd = subTemp.index(before: afterEnd)
+            wordArray.append(subTemp[...endInd])
+        } else {
+            wordArray.append(temp.dropFirst(0))
+            print("no spaces in string")
+        }
+
+        
+        print(wordArray)
+    }
+    
+    func check(response: String) -> Bool {
+        if response.lastIndex(of: " ") == response.index(before: response.endIndex) {
+            return true
+        }
+        return false
+    }
 
 }
 
