@@ -8,5 +8,13 @@
 import UIKit
 
 class CustomCell: UICollectionViewCell {
+    @IBOutlet weak var imageOutlet: UIImageView!
+    
+    func configure(i: UIImage) {
+        
+        imageOutlet.image = i
+        
+    }
+    
     
 }
