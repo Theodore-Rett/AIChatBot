@@ -10,7 +10,7 @@ import UIKit
 class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var stack1: UICollectionView!
-    let images: [UIImage] = [UIImage(named: "NBA")!, UIImage(named: "NBA")!, UIImage(named: "NBA")!, UIImage(named: "NBA")! ]
+    let images: [UIImage] = [UIImage(named: "bball")!, UIImage(named: "baseball")!, UIImage(named: "proWSoccer")!, UIImage(named: "nfl")!, UIImage(named: "track")!, UIImage(named: "pool")!, UIImage(named: "math")!, UIImage(named: "compSci")!, UIImage(named: "books")!, UIImage(named: "netflix")!, UIImage(named: "chem")!, UIImage(named: "beach")!, UIImage(named: "mountains")!, UIImage(named: "desert")! ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
