@@ -79,10 +79,22 @@ class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectio
         UIViewController2.profile.volleyball = tf
     case 8:
         UIViewController2.profile.math = tf
+    case 9:
+        UIViewController2.profile.computers = tf
+    case 10:
+        UIViewController2.profile.reading = tf
+    case 11:
+        UIViewController2.profile.netflix = tf
+    case 12:
+        UIViewController2.profile.beach = tf
+    case 13:
+        UIViewController2.profile.dog = tf
+    case 14:
+        UIViewController2.profile.cat = tf
         
     default:
         print("default")
-    }
+    
         
         
         
