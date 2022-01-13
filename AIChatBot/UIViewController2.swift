@@ -10,7 +10,9 @@ import UIKit
 class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var stack1: UICollectionView!
-    let images: [UIImage] = [UIImage(named: "bball")!, UIImage(named: "baseball")!,UIImage(named: "hockey")!, UIImage(named: "nfl")!, UIImage(named: "track")!,  UIImage(named: "proWSoccer")!, UIImage(named: "pool")!, UIImage(named: "volleyball")!, UIImage(named: "math")!, UIImage(named: "compSci")!, UIImage(named: "books")!, UIImage(named: "netflix")!, UIImage(named: "beach")!, UIImage(named: "mountains")!, UIImage(named: "desert")! ]
+    let images: [UIImage] = [UIImage(named: "bball")!, UIImage(named: "baseball")!,UIImage(named: "hockey")!, UIImage(named: "nfl")!, UIImage(named: "track")!,  UIImage(named: "proWSoccer")!, UIImage(named: "pool")!, UIImage(named: "volleyball")!, UIImage(named: "math")!, UIImage(named: "compSci")!, UIImage(named: "books")!, UIImage(named: "netflix")!,   UIImage(named: "beach")!, UIImage(named: "dog")!, UIImage(named: "cat")!]
+
+    static var profile: Profile = Profile()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,7 @@ class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectio
     
     
     @IBAction func finishAction(_ sender: UIButton) {
-        
-        
+        //UIViewController2.profile = Profile()
     }
     
     
@@ -32,9 +33,11 @@ class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectio
         if cell.myBool == false {
         cell.backgroundColor = UIColor.green
             cell.myBool = true
+            setPreferance(index: indexPath.row, tf: true)
         } else {
             cell.backgroundColor = UIColor.clear
                 cell.myBool = false
+            setPreferance(index: indexPath.row, tf: false)
         }
     }
     
@@ -51,6 +54,41 @@ class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectio
         cell.configure(i: images[indexPath.row])
         
         return cell
+    }
+    
+    
+    func setPreferance(index: Int, tf: Bool) {
+        
+    switch index {
+       
+    case 0:
+        UIViewController2.profile.basketball = tf
+    case 1:
+        UIViewController2.profile.baseball = tf
+    case 2:
+        UIViewController2.profile.hockey = tf
+    case 3:
+        UIViewController2.profile.football = tf
+    case 4:
+        UIViewController2.profile.track = tf
+    case 5:
+        UIViewController2.profile.soccer = tf
+    case 6:
+        UIViewController2.profile.swim = tf
+    case 7:
+        UIViewController2.profile.volleyball = tf
+    case 8:
+        UIViewController2.profile.math = tf
+        
+    default:
+        print("default")
+    }
+        
+        
+        
+    }
+        
+        
     }
     
 
