@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LQL-kR-9Vv">
-                                <rect key="frame" x="0.0" y="108" width="414" height="679"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="648"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9y4-qQ-KTI">
@@ -109,16 +109,17 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDR-b3-7eF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="148"/>
+                                                    <rect key="frame" x="5" y="5" width="138" height="138"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="NDR-b3-7eF" firstAttribute="leading" secondItem="CwI-xu-fTK" secondAttribute="leading" id="02I-Iw-caN"/>
-                                                <constraint firstItem="NDR-b3-7eF" firstAttribute="top" secondItem="CwI-xu-fTK" secondAttribute="top" id="EIC-jM-WIQ"/>
-                                                <constraint firstAttribute="bottom" secondItem="NDR-b3-7eF" secondAttribute="bottom" id="S4Q-7G-HQF"/>
-                                                <constraint firstAttribute="trailing" secondItem="NDR-b3-7eF" secondAttribute="trailing" id="TJZ-HW-kLN"/>
+                                                <constraint firstItem="NDR-b3-7eF" firstAttribute="leading" secondItem="CwI-xu-fTK" secondAttribute="leading" constant="5" id="02I-Iw-caN"/>
+                                                <constraint firstItem="NDR-b3-7eF" firstAttribute="top" secondItem="CwI-xu-fTK" secondAttribute="top" constant="5" id="EIC-jM-WIQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="NDR-b3-7eF" secondAttribute="bottom" constant="5" id="S4Q-7G-HQF"/>
+                                                <constraint firstAttribute="trailing" secondItem="NDR-b3-7eF" secondAttribute="trailing" constant="5" id="TJZ-HW-kLN"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="148" height="148"/>
                                         <connections>
                                             <outlet property="imageOutlet" destination="NDR-b3-7eF" id="Frl-Dh-Gjn"/>
@@ -133,9 +134,22 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wy7-jE-JTb">
+                                <rect key="frame" x="0.0" y="784" width="414" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Finish">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="finishAction:" destination="NGr-f9-qbB" eventType="touchUpInside" id="Vsh-0p-XNu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hTT-hN-ayL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="stack1" destination="LQL-kR-9Vv" id="lXJ-h0-3Gd"/>
@@ -148,8 +162,8 @@
     </scenes>
     <resources>
         <image name="GettyImages-1092658864_hero-1024x575" width="1024" height="575"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
