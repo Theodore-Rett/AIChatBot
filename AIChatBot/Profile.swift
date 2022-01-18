@@ -24,26 +24,28 @@ class Profile {
     var cat: Bool = false
     var dog: Bool = false
     var beach: Bool = false
+    
+    var likes = Array(repeating: false, count: 15)
+
 
     
-    init(bkb: Bool, vb: Bool, fb: Bool, hcy: Bool, swim: Bool, baseb: Bool, soc: Bool, track: Bool, math: Bool, read: Bool, net: Bool, comp: Bool, cat: Bool, dog: Bool, beach: Bool) {
-        
-        basketball = bkb
-        volleyball = vb
-        football = fb
-        hockey = hcy
-        self.swim = swim
-        soccer = soc
-        self.track = track
-        self.math = math
-        reading = read
-        netflix = net
-        computers = comp
-        self.cat = cat
-        self.dog = dog
-        self.beach = beach
-        
-        
+    
+    func toString() {
+        print(basketball)
+        print(baseball)
+        print(hockey)
+        print(football)
+        print(track)
+        print(soccer)
+        print(swim)
+        print(volleyball)
+        print(math)
+        print(computers)
+        print(reading)
+        print(netflix)
+        print(beach)
+        print(dog)
+        print(cat)
     }
     
     

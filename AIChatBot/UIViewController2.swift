@@ -19,12 +19,20 @@ class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectio
 
         stack1.delegate = self
         stack1.dataSource = self
+        
+        if UserDefaults.standard.array(forKey: "likes") == nil {
+            UserDefaults.standard.set(UIViewController2.profile.likes, forKey: "likes")
+        } else {
+            UIViewController2.profile.likes = UserDefaults.standard.array(forKey: "likes") as! [Bool]
+        }
+        
     }
     
     
     
     @IBAction func finishAction(_ sender: UIButton) {
-        //UIViewController2.profile = Profile()
+        UserDefaults.standard.set(UIViewController2.profile.likes, forKey: "likes")
+        UIViewController2.profile.toString()
     }
     
     
@@ -33,10 +41,12 @@ class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectio
         if cell.myBool == false {
         cell.backgroundColor = UIColor.green
             cell.myBool = true
+            UIViewController2.profile.likes[indexPath.row] = true
             setPreferance(index: indexPath.row, tf: true)
         } else {
             cell.backgroundColor = UIColor.clear
-                cell.myBool = false
+            cell.myBool = false
+            UIViewController2.profile.likes[indexPath.row] = false
             setPreferance(index: indexPath.row, tf: false)
         }
     }
@@ -52,6 +62,13 @@ class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomCell
         
         cell.configure(i: images[indexPath.row])
+        if UIViewController2.profile.likes[indexPath.row] == true {
+            cell.myBool = true
+            cell.backgroundColor = UIColor.green
+        } else {
+            cell.myBool = false
+            cell.backgroundColor = UIColor.clear
+        }
         
         return cell
     }

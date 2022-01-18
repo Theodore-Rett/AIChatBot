@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     filterResponse(response: response)
         } //only runs of there is something in the outlet
         responseOutlet.text = ""
+        
     }
     
     
