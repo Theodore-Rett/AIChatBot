@@ -9,6 +9,7 @@ import Foundation
 
 import Foundation
 public class ConversationTopicDataBase{
+    
     //sports
     var sports = ["BASKETBALL", "BASEBALL", "VOLLEYBALL", "HOCKEY", "FOOTBALL", "SOCCER", "SWIMMING", "SWIM", "RUNNING", "TRACK", "DEFENSE", "OFFENSE", "WIN", "LOSE", "TOURNAMENT"]
     
@@ -60,5 +61,11 @@ public class ConversationTopicDataBase{
     init(){
         
     }
+    
+    func getArray() -> [[String]] {
+        let allWords = [sports, basketball, baseball, volleyball, hockey, football, soccer, swimming, running, school, classes, computerScience, math, english, history, science, media, netflix, reading, time, travel, hobbies]
+        return allWords
+    }
+    
     
 }

@@ -10,11 +10,16 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var responseOutlet: UITextField!
+    
+    @IBOutlet weak var AIresponse: UILabel!
+    
     var wordArray: [Substring] = []
+    let convoVocabulary = ConversationTopicDataBase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    
     }
 
     @IBAction func unwindHome(_ seg: UIStoryboardSegue ) {
@@ -27,7 +32,7 @@ class ViewController: UIViewController {
     filterResponse(response: response)
         } //only runs of there is something in the outlet
         responseOutlet.text = ""
-        
+        AIresponse.text = generateUIResponse()
     }
     
     
@@ -70,6 +75,28 @@ class ViewController: UIViewController {
         
         print(wordArray)
     }
+    
+    
+    func generateUIResponse() -> String {
+        let response = ""
+        let array = convoVocabulary.getArray()
+        
+        for topic in array {
+            for each in topic {
+                for word in wordArray {
+                    if word == each {
+                        //code for response
+                    }
+                }
+            }
+        }
+        
+        
+        
+        return response
+    }
+    
+    
     
     func check(response: String) -> Bool {
         if response.lastIndex(of: " ") == response.index(before: response.endIndex) {
