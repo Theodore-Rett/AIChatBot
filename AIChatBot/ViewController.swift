@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     var wordArray: [Substring] = []
     let convoVocabulary = ConversationTopicDataBase()
+    let responseDataBase = ResponseGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,20 +33,31 @@ class ViewController: UIViewController {
     filterResponse(response: response)
         } //only runs of there is something in the outlet
         responseOutlet.text = ""
-        AIresponse.text = generateUIResponse()
+        respond()
     }
     
     
     
     func filterResponse(response: String) {
+        var question: Bool = false
+        var excited: Bool = false
         wordArray = []
-        //response = response.lowercased() //all lowercase response
-        if check(response: response) == true {
-            
-        }
         
-        let temp = response
+        if response != "" && " " != response.first { //error will show up if not true
+        
+        var temp = response
         var subTemp: Substring = "" //cuts off the previous word it just stored into wordarray
+            
+        temp = temp.uppercased()
+        if check(response: response) == true { //there is a space at the end
+                print("Here \(temp.remove(at: temp.index(before: temp.endIndex)))")
+        }
+            
+            if temp.last == "?" {
+                question = true
+            } else if temp.last == "!" {
+                excited = true
+            }
         
         if let wordInd = temp.firstIndex(of: " ") {
         let wordIndAfter = temp.index(after: wordInd)
@@ -75,25 +87,23 @@ class ViewController: UIViewController {
         
         print(wordArray)
     }
+    }
     
     
-    func generateUIResponse() -> String {
-        let response = ""
+    func respond() {
         let array = convoVocabulary.getArray()
         
         for topic in array {
             for each in topic {
                 for word in wordArray {
                     if word == each {
-                        //code for response
+                        responseDataBase.likesArray.append(topic)
                     }
                 }
             }
         }
-        
-        
-        
-        return response
+        print(responseDataBase.likesArray)
+        AIresponse.text = responseDataBase.genResponse(array: wordArray)
     }
     
     
