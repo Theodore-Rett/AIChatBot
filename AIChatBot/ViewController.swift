@@ -103,6 +103,7 @@ class ViewController: UIViewController {
             }
         }
         print(responseDataBase.likesArray)
+        responseDataBase.resetLikes()
         AIresponse.text = responseDataBase.genResponse(array: wordArray)
     }
     

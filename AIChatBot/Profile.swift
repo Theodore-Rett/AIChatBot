@@ -10,24 +10,26 @@ import Foundation
 class Profile {
     
     var basketball: Bool = false //default is false, they don't like it
-    var volleyball: Bool = false
-    var football: Bool = false
-    var hockey: Bool = false
-    var swim: Bool = false
     var baseball: Bool = false
-    var soccer: Bool = false
+    var hockey: Bool = false
+    var football: Bool = false
     var track: Bool = false
+    var soccer: Bool = false
+    var swim: Bool = false
+    var volleyball: Bool = false
     var math: Bool = false
+    var computers: Bool = false
     var reading: Bool = false
     var netflix: Bool = false
-    var computers: Bool = false
-    var cat: Bool = false
-    var dog: Bool = false
     var beach: Bool = false
+    var dog: Bool = false
+    var cat: Bool = false
     
-    var likes = Array(repeating: false, count: 15)
+    var likes = Array(repeating: false, count: 15) //parallel arrays \/
+    var catagories: [String] = ["basketball", "volleyball", "football", "hockey", "football", "track", "soccer", "swim", "volleyball", "math", "computer science", "reading", "netflix", "beach", "dogs", "cats"]
 
-
+    
+    
     
     
     func toString() {

@@ -11,21 +11,61 @@ class ResponseGenerator {
     
     var likesArray: [[String]] = []
     
+    var interests: [String] = []
+    
+    var topic: String = ""
     
     func genResponse(array: [Substring]) -> String {
         var aiResponse = ""
         
-        if array.count == 1 && likesArray.count == 0 {
-            aiResponse = "Hello, please be more specific!"
+        
+    if array.count == 1 {
+            if array[0] == "HI" || array[0] == "HELLO" || array[0] == "HEY" {
+                aiResponse = "Hello, how can I assist you?"
+                return aiResponse
+            }
+        if likesArray.count == 0 {
+            aiResponse = "Please be more specific!"
+            return aiResponse
+        }
+    } else if likesArray.count == 0 {
+            
+            let randNum: Int = Int.random(in: 0...interests.count-1)
+            
+            aiResponse = "I see your interested in \(interests[randNum])"
+            topic = interests[randNum]
+        return aiResponse
+            
         }
         
+        print(likesArray)
         
         
-        
-        
+        //default
+        aiResponse = "I'm not sure how to respond, please try something else..."
         return aiResponse
     }
     
+    init() {
+        
+        var i = 0
+        for each in UserDefaults.standard.array(forKey: "likes") as! [Bool] {
+            if each == true {
+                interests.append(UIViewController2.profile.catagories[i])
+            }
+            i += 1
+        }
+    }
+    
+    func resetLikes() {
+        var i = 0
+        for each in UserDefaults.standard.array(forKey: "likes") as! [Bool] {
+            if each == true {
+                interests.append(UIViewController2.profile.catagories[i])
+            }
+            i += 1
+        }
+    }
     
     
 }
