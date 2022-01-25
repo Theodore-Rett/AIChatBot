@@ -9,6 +9,8 @@ import Foundation
 
 class Profile {
     
+    var name: String = ""
+    
     var basketball: Bool = false //default is false, they don't like it
     var baseball: Bool = false
     var hockey: Bool = false

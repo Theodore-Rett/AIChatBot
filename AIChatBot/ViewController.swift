@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     
     
     func filterResponse(response: String) {
+        responseDataBase.resetLikes()
         var question: Bool = false
         var excited: Bool = false
         wordArray = []
@@ -57,8 +58,13 @@ class ViewController: UIViewController {
             
             if temp.last == "?" {
                 question = true
+                responseDataBase.question = true
             } else if temp.last == "!" {
                 excited = true
+                responseDataBase.excited = true
+            } else {
+                responseDataBase.question = false
+                responseDataBase.excited = false
             }
         
         if let wordInd = temp.firstIndex(of: " ") {
@@ -89,6 +95,15 @@ class ViewController: UIViewController {
         
         print(wordArray)
     }
+        var i = 0
+        for each in wordArray {
+            if each.last == "," || each.last == "." || each.last == "?" || each.last == "!" {
+                print(wordArray[i].removeLast())
+            }
+            i += 1
+        }
+        
+        
     }
     
     
