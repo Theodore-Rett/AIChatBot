@@ -23,7 +23,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     
-        
+        if UserDefaults.standard.array(forKey: "likes") == nil {
+            UserDefaults.standard.set([String].self, forKey: "likes")
+        }
         
     }
 
