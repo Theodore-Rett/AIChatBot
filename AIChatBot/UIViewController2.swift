@@ -33,6 +33,7 @@ class UIViewController2: UIViewController, UICollectionViewDelegate, UICollectio
     @IBAction func finishAction(_ sender: UIButton) {
         UserDefaults.standard.set(UIViewController2.profile.likes, forKey: "likes")
         UIViewController2.profile.toString()
+        
     }
     
     
