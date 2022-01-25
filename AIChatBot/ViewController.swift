@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     let convoVocabulary = ConversationTopicDataBase()
     let responseDataBase = ResponseGenerator()
     
+    var currentTopic = "N/A"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -102,6 +104,167 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+        var sports = 0
+        var basketball = 0
+        var baseball = 0
+        var volleyball = 0
+        var hockey = 0
+        var football = 0
+        var soccer = 0
+        var swimming = 0
+        var running = 0
+        var school = 0
+        var classes = 0
+        var computerScience = 0
+        var math = 0
+        var english = 0
+        var history = 0
+        var science = 0
+        var media = 0
+        var netflix = 0
+        var reading = 0
+        var time = 0
+        var travel = 0
+        var hobbies = 0
+        
+        for topic in responseDataBase.likesArray{
+            if(topic == convoVocabulary.sports){
+                sports += 1
+            } else if(topic == convoVocabulary.basketball){
+                basketball += 1
+            } else if(topic == convoVocabulary.baseball){
+                baseball += 1
+            } else if(topic == convoVocabulary.volleyball){
+                volleyball += 1
+            } else if(topic == convoVocabulary.hockey){
+                hockey += 1
+            } else if (topic == convoVocabulary.football){
+                football += 1
+            } else if(topic == convoVocabulary.soccer){
+                soccer += 1
+            } else if(topic == convoVocabulary.swimming){
+                swimming += 1
+            } else if(topic == convoVocabulary.running){
+                running += 1
+            } else if(topic == convoVocabulary.school){
+                school += 1
+            } else if(topic == convoVocabulary.classes){
+                classes += 1
+            } else if(topic == convoVocabulary.computerScience){
+                computerScience += 1
+            } else if(topic == convoVocabulary.math){
+                math += 1
+            } else if(topic == convoVocabulary.english){
+                english += 1
+            } else if(topic == convoVocabulary.history){
+                history += 1
+            } else if(topic == convoVocabulary.science){
+                science += 1
+            } else if(topic == convoVocabulary.media){
+                media += 1
+            } else if(topic == convoVocabulary.netflix){
+                netflix += 1
+            } else if(topic == convoVocabulary.reading){
+                reading += 1
+            } else if(topic == convoVocabulary.time){
+                time += 1
+            } else if(topic == convoVocabulary.travel){
+                travel += 1
+            } else if(topic == convoVocabulary.hobbies){
+                hobbies += 1
+            }
+        }
+        
+        var mostCount = 0
+        
+        if(mostCount < sports){
+            mostCount = sports
+            currentTopic = "sports"
+        }
+        if(mostCount < basketball){
+            mostCount = basketball
+            currentTopic = "basketball"
+        }
+        if(mostCount < baseball){
+            mostCount = baseball
+            currentTopic = "baseball"
+        }
+        if(mostCount < volleyball){
+            mostCount = volleyball
+            currentTopic = "volleyball"
+        }
+        if(mostCount < hockey){
+            mostCount = hockey
+            currentTopic = "hockey"
+        }
+        if(mostCount < soccer){
+            mostCount = soccer
+            currentTopic = "soccer"
+        }
+        if(mostCount < swimming){
+            mostCount = swimming
+            currentTopic = "swimming"
+        }
+        if(mostCount < running){
+            mostCount = running
+            currentTopic = "running"
+        }
+        if(mostCount < school){
+            mostCount = school
+            currentTopic = "school"
+        }
+        if(mostCount < classes){
+            mostCount = classes
+            currentTopic = "classes"
+        }
+        if(mostCount < computerScience){
+            mostCount = computerScience
+            currentTopic = "computerScience"
+        }
+        if(mostCount < math){
+            mostCount = math
+            currentTopic = "math"
+        }
+        if(mostCount < english){
+            mostCount = english
+            currentTopic = "english"
+        }
+        if(mostCount < history){
+            mostCount = history
+            currentTopic = "history"
+        }
+        if(mostCount < science){
+            mostCount = science
+            currentTopic = "science"
+        }
+        if(mostCount < media){
+            mostCount = media
+            currentTopic = "media"
+        }
+        if(mostCount < netflix){
+            mostCount = netflix
+            currentTopic = "netflix"
+        }
+        if(mostCount < reading){
+            mostCount = reading
+            currentTopic = "reading"
+        }
+        if(mostCount < time){
+            mostCount = time
+            currentTopic = "time"
+        }
+        if(mostCount < travel){
+            mostCount = travel
+            currentTopic = "travel"
+        }
+        if(mostCount < hobbies){
+            mostCount = hobbies
+            currentTopic = "hobbies"
+        }
+        
+        print("Currently talking about \(currentTopic)")
+        
         print(responseDataBase.likesArray)
         responseDataBase.resetLikes()
         AIresponse.text = responseDataBase.genResponse(array: wordArray)

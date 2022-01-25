@@ -11,6 +11,8 @@ class ResponseGenerator {
     
     var likesArray: [[String]] = []
     
+    var topicsTalked: [String] = []
+    
     var interests: [String] = []
     
     var topic: String = ""
@@ -66,25 +68,4 @@ class ResponseGenerator {
             i += 1
         }
     }
-    
-    func mostOccuring() -> String{
-        let mappedLikes = likesArray.map {($0,1)}
-        
-        let counts = Dictionary(mappedLikes, uniquingKeysWith: +)
-        
-        var mostCommon = likesArray(1)
-        
-        var i = 0
-        
-        while i < likesArray.count{
-            
-            if(counts)
-            
-            i+=
-        }
-        
-        
-        return "temp"
-    }
-    
 }
