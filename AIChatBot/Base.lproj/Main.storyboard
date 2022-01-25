@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VbB-VL-70I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NGr-f9-qbB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -150,7 +150,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="finishAction:" destination="NGr-f9-qbB" eventType="touchUpInside" id="Vsh-0p-XNu"/>
-                                    <segue destination="6Kz-qF-ayo" kind="unwind" unwindAction="unwindHome:" id="cBf-GB-0g3"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="DND-Tx-HMG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -163,13 +163,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASb-Zq-47P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="6Kz-qF-ayo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2752" y="66"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kWW-Br-BhU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDr-8h-m5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VbB-VL-70I" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="9QF-Lh-VIH"/>
@@ -182,11 +182,13 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YC3-EH-tv4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CDr-8h-m5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="65.625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YC3-EH-tv4"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="GettyImages-1092658864_hero-1024x575" width="1024" height="575"/>
         <systemColor name="systemIndigoColor">

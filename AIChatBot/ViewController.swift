@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var wordArray: [Substring] = []
     let convoVocabulary = ConversationTopicDataBase()
-    let responseDataBase = ResponseGenerator()
+    var responseDataBase: ResponseGenerator!
     
     var currentTopic = "N/A"
     
@@ -23,9 +23,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     
-        if UserDefaults.standard.array(forKey: "likes") == nil {
-            UserDefaults.standard.set([String].self, forKey: "likes")
-        }
+//        if UserDefaults.standard.array(forKey: "likes") == nil {
+//            UserDefaults.standard.set([String].self, forKey: "likes")
+//        }
+        responseDataBase = ResponseGenerator()
         
     }
 
