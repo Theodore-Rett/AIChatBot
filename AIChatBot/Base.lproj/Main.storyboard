@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NGr-f9-qbB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Enz-N4-EUY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -53,7 +53,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="NGr-f9-qbB" kind="show" id="kWk-NF-eFZ"/>
+                                    <segue destination="Enz-N4-EUY" kind="show" id="kWk-NF-eFZ"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GettyImages-1092658864_hero-1024x575" translatesAutoresizingMaskIntoConstraints="NO" id="FEm-fx-og8">
@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855.072463768116" y="65.625"/>
+            <point key="canvasLocation" x="2765.217391304348" y="65.625"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="fkb-NE-gGr">
@@ -164,31 +164,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASb-Zq-47P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2752" y="66"/>
+            <point key="canvasLocation" x="1473.913043478261" y="65.625"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="kWW-Br-BhU">
+        <scene sceneID="nqJ-ZV-3pJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CDr-8h-m5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VbB-VL-70I" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Enz-N4-EUY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="9QF-Lh-VIH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vNb-QD-kgs">
+                    <navigationItem key="navigationItem" id="mqi-kf-3lk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ccy-Oo-2LX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YC3-EH-tv4"/>
+                        <segue destination="NGr-f9-qbB" kind="relationship" relationship="rootViewController" id="fMO-Yb-75b"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CK0-oP-lZk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.92753623188412" y="65.625"/>
+            <point key="canvasLocation" x="563.768115942029" y="65.625"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="YC3-EH-tv4"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="GettyImages-1092658864_hero-1024x575" width="1024" height="575"/>
         <systemColor name="systemIndigoColor">
