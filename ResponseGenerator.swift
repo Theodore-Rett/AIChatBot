@@ -96,26 +96,6 @@ class ResponseGenerator {
         }
     }
     
-    func mostOccuring() -> String{
-        let mappedLikes = likesArray.map {($0,1)}
-        
-        let counts = Dictionary(mappedLikes, uniquingKeysWith: +)
-        
-       // var mostCommon = likesArray(1)
-        
-        var i = 0
-        
-        while i < likesArray.count{
-            
-       //     if(counts)
-            
-          //  i+=
-        }
-        
-        
-        return "temp"
-    }
-    
     
     
     func randTopicResponse(topic: String) -> String {
@@ -145,6 +125,18 @@ class ResponseGenerator {
             response = ""
         case "computer science":
             response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1){
+                response = "I love computer science! It gives me life!"
+            } else if(rand == 2){
+                response = "What languages do you code in?"
+            } else if(rand == 3){
+                response = "Computer Science?!? THAT'S LIT!"
+            } else if(rand == 4){
+                response = "I see you like computer science, what's your favorite project to work on?"
+            } else if(rand == 5){
+                response = "01000011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 00100000 01110011 01100011 01101001 01100101 01101110 01100011 01100101 00100000 01101001 01110011 00100000 01110100 01101000 01100101 00100000 01100010 01100101 01110011 01110100 00100001"
+            }
         case "reading":
             response = ""
         case "netflix":
@@ -158,14 +150,7 @@ class ResponseGenerator {
             
         default :
             print("default")
-            return response
-            
         }
-        
-        
-        
+            return response
     }
-    
-    
-    
 }
