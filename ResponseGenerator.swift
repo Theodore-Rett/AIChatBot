@@ -54,6 +54,14 @@ class ResponseGenerator {
                 if likesArray.count == 0 {
                     aiResponse = "Please be more specific and update your interests for your profile!"
                     return aiResponse
+                } else if(topic == "computer science"){
+                    let rand = Int.random(in: 1 ... 10)
+                    if(rand == 1){
+                        aiResponse = "I love computer science! It gives me life!"
+                    } else if(rand == 2){
+                        aiResponse = "What languages do you code in?"
+                    }
+                    return aiResponse
                 }
             }
         }
