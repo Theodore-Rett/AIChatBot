@@ -32,13 +32,17 @@ class ResponseGenerator {
                     aiResponse = "Sorry, I cannot answer that question, and I see you have not set your intertests. Please update your profile!"
                     return aiResponse
                 }
-            }
+            } else {
+                aiResponse = "Sorry I cannot answer your question about \(topic)"
+                return aiResponse
+        
+        }
         } else { // not a question
             if array[0] == "HI" || array[0] == "HELLO" || array[0] == "HEY" && likesArray.count == 0 {
                 aiResponse = "Hello, how can I assist you?"
                 return aiResponse
             } //hi
-            if likesArray.count == 0 && interests.count != 0 {
+            if likesArray.count == 0 && interests.count != 0 && topic == ""{
             
             let randNum: Int = Int.random(in: 0...interests.count-1)
             
@@ -105,6 +109,54 @@ class ResponseGenerator {
     }
     
     
+    
+    func randTopicResponse(topic: String) -> String {
+        var response = ""
+        
+        switch topic {
+            
+        case "basketball":
+            response = ""
+        case "baseball":
+            response = ""
+        case "hockey":
+            response = ""
+        case "football":
+            response = ""
+        case "track":
+            response = ""
+        case "hockey":
+            response = ""
+        case "soccer":
+            response = ""
+        case "swim":
+            response = ""
+        case "volleyball":
+            response = ""
+        case "math":
+            response = ""
+        case "computer science":
+            response = ""
+        case "reading":
+            response = ""
+        case "netflix":
+            response = ""
+        case "beach":
+            response = ""
+        case "dog":
+            response = ""
+        case "cat":
+            response = ""
+            
+        default :
+            print("default")
+            return response
+            
+        }
+        
+        
+        
+    }
     
     
     

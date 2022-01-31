@@ -274,6 +274,7 @@ class ViewController: UIViewController {
             mostCount = time
             currentTopic = "time"
         }
+        
         if(mostCount < travel){
             mostCount = travel
             currentTopic = "travel"
@@ -284,6 +285,7 @@ class ViewController: UIViewController {
         }
         
         print("Currently talking about \(currentTopic)")
+        responseDataBase.topic = currentTopic
         
         print(responseDataBase.likesArray)
         responseDataBase.resetLikes()

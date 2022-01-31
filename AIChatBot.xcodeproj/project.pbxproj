@@ -98,6 +98,7 @@
 			children = (
 				20838038278C939900FEB3F8 /* ConversationTopicDataBase.swift */,
 				EE1C2EFB2798610D00934260 /* ResponseGenerator.swift */,
+				EE1DC9E1278F4A86000FFDC5 /* Profile.swift */,
 				209E0B1527873E4E009E10D9 /* AIChatBot */,
 				209E0B2C27873E51009E10D9 /* AIChatBotTests */,
 				209E0B3627873E51009E10D9 /* AIChatBotUITests */,
@@ -125,7 +126,6 @@
 				209E0B1C27873E4E009E10D9 /* Main.storyboard */,
 				EE7B2A0E278C92C20058AC7A /* CustomCell.swift */,
 				EE7B2A0A278C8EE30058AC7A /* UIViewController2.swift */,
-				EE1DC9E1278F4A86000FFDC5 /* Profile.swift */,
 				209E0B1F27873E50009E10D9 /* Assets.xcassets */,
 				209E0B2127873E50009E10D9 /* LaunchScreen.storyboard */,
 				209E0B2427873E50009E10D9 /* Info.plist */,

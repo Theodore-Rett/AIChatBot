@@ -28,7 +28,7 @@ class Profile {
     var cat: Bool = false
     
     var likes = Array(repeating: false, count: 15) //parallel arrays \/
-    var catagories: [String] = ["basketball", "volleyball", "football", "hockey", "football", "track", "soccer", "swim", "volleyball", "math", "computer science", "reading", "netflix", "beach", "dogs", "cats"]
+    var catagories: [String] = ["basketball", "baseball", "hockey", "hockey", "football", "track", "soccer", "swim", "volleyball", "math", "computer science", "reading", "netflix", "beach", "dogs", "cats"]
 
     
     
