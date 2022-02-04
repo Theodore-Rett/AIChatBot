@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     var wordArray: [Substring] = []
     let convoVocabulary = ConversationTopicDataBase()
     var responseDataBase: ResponseGenerator!
+    var emotion : String = ""
+    
+    @IBOutlet weak var botDisplay: UIImageView!
     
     var currentTopic = "N/A"
     
@@ -27,6 +30,28 @@ class ViewController: UIViewController {
 //            UserDefaults.standard.set([String].self, forKey: "likes")
 //        }
         responseDataBase = ResponseGenerator()
+        emotion = responseDataBase.emotion
+        
+        if(emotion == "neutral"){
+            botDisplay.image = UIImage(named: "neutral")
+        } else if(emotion == "happy"){
+            botDisplay.image = UIImage(named: "happy")
+        } else if(emotion == "computing"){
+            botDisplay.image = UIImage(named: "computing")
+        } else if(emotion == "error"){
+            botDisplay.image = UIImage(named: "error")
+        } else if(emotion == "greeting"){
+            botDisplay.image = UIImage(named: "greeting")
+        } else if(emotion == "off"){
+            botDisplay.image = UIImage(named: "off")
+        } else if(emotion == "questioning"){
+            botDisplay.image = UIImage(named: "questioning")
+        } else if(emotion == "sad"){
+            botDisplay.image = UIImage(named: "sad")
+        } else if (emotion == "surprised"){
+            botDisplay.image = UIImage(named: "surprised")
+        }
+        
         
     }
 

@@ -16,6 +16,7 @@ class ResponseGenerator {
     var topic: String = ""
     var question: Bool = false
     var excited: Bool = false
+    var emotion: String = "off"
     
     func genResponse(array: [Substring]) -> String {
         var aiResponse = ""
