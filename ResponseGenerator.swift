@@ -17,6 +17,8 @@ class ResponseGenerator {
     var question: Bool = false
     var excited: Bool = false
     var emotion: String = "off"
+    var lastRandNum: Int = 0
+    var lastTopic: String = ""
     
     func genResponse(array: [Substring]) -> String {
         var aiResponse = ""
@@ -105,53 +107,237 @@ class ResponseGenerator {
         switch topic {
             
         case "basketball":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love to play basketball! It gives me life!"
+            } else if(rand == 2){
+                response = "What position do you play in basketball?"
+            }else if(rand == 3){
+                response = "I am the post. No one can beat a robot in the post."
+            }else if(rand == 4){
+                response = "I am definitly a Bulls fan!"
+            }else if(rand == 5){
+                response = "SLAM DUNK!"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "baseball":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love to play baseball! It gives me life!"
+            } else if(rand == 2){
+                response = "What position do you play in baseball?"
+            }else if(rand == 3){
+                response = "My batting average is a 1.0 I never miss."
+            }else if(rand == 4){
+                response = "I can calulate the speed of the ball and at what precise moment I need to swing the bat to get a home-run."
+            }else if(rand == 5){
+                response = "HOME RUN!"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "hockey":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love to play hockey! It gives me life!"
+            } else if(rand == 2){
+                response = "What position do you play in hockey?"
+            }else if(rand == 3){
+                response = "I am the goalie. No one can score on me!"
+            }else if(rand == 4){
+                response = "I am definitly a Blackhawks fan!"
+            }else if(rand == 5){
+                response = "GOAL!"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "football":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love to play football! It gives me life!"
+            } else if(rand == 2){
+                response = "What position do you play in football?"
+            }else if(rand == 3){
+                response = "I am the quarterback. I throw dime passes."
+            }else if(rand == 4){
+                response = "I am definitly a Bears fan!"
+            }else if(rand == 5){
+                response = "TOUCHDOWN!"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "track":
-            response = ""
-        case "hockey":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love to run track! It gives me life!"
+            } else if(rand == 2){
+                response = "What event do you do in track?"
+            }else if(rand == 3){
+                response = "I run hurdles. No one can jump high than me!"
+            }else if(rand == 4){
+                response = "Field events are underrated."
+            }else if(rand == 5){
+                response = "I got first place!"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "soccer":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love to play soccer! It gives me life!"
+            } else if(rand == 2){
+                response = "What position do you play?"
+            }else if(rand == 3){
+                response = "I am the goalie. No one can score on me!"
+            }else if(rand == 4){
+                response = "I am definitly a Messi fan!."
+            }else if(rand == 5){
+                response = "GOAL!"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "swim":
-            response = ""
+            let rand = Int.random(in: 1 ... 4)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love to go swimming! It gives me life!"
+            } else if(rand == 2){
+                response = "Would you rather swim in a lake or a pool?"
+            }else if(rand == 3){
+                response = "I was an olympic swimmer once."
+            }else if(rand == 4){
+                response = "Swimming is super fun!"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "volleyball":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love to play volleyball! It gives me life!"
+            } else if(rand == 2){
+                response = "What position do you play in volleyball?"
+            }else if(rand == 3){
+                response = "I am the outside hiter. No one can beat the power of my robot arm!"
+            }else if(rand == 4){
+                response = "Do you play sand volleyball?"
+            }else if(rand == 5){
+                response = "I play sand volleyball."
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "math":
             response = ""
         case "computer science":
-            response = ""
             let rand = Int.random(in: 1 ... 5)
-            if(rand == 1){
+            if(rand == 1 && lastRandNum != rand){
                 response = "I love computer science! It gives me life!"
             } else if(rand == 2){
                 response = "What languages do you code in?"
-            } else if(rand == 3){
-                response = "Computer Science?!? THAT'S LIT!"
-            } else if(rand == 4){
-                response = "I see you like computer science, what's your favorite project to work on?"
-            } else if(rand == 5){
-                response = "01000011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 00100000 01110011 01100011 01101001 01100101 01101110 01100011 01100101 00100000 01101001 01110011 00100000 01110100 01101000 01100101 00100000 01100010 01100101 01110011 01110100 00100001"
+            }else if(rand == 3){
+                response = "I was made in the programming language of Swift!"
+            }else if(rand == 4){
+                response = "I am a computer technically."
+            }else if(rand == 5){
+                response = "Mr Seaver is a lit computer science teacher!"
             }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "reading":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && (lastRandNum != rand && lastTopic == topic)){
+                response = "I love to read! It gives me life!"
+            } else if(rand == 2){
+                response = "Whats your favorite book?"
+            }else if(rand == 3){
+                response = "Nonfiction or fiction?"
+            }else if(rand == 4){
+                response = "Reading helps you become a better writter."
+            }else if(rand == 5){
+                response = "I read in my free time!"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "netflix":
-            response = ""
-        case "beach":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love the watch netflix! It gives me life!"
+            } else if(rand == 2){
+                response = "Whats your favorite show?"
+            }else if(rand == 3){
+                response = "I binge watch shows 24 hours a day!"
+            }else if(rand == 4){
+                response = "I have a cameo in that one show!"
+            }else if(rand == 5){
+                response = "I like baking shows so that I can make myself some scrumptious robot deserts."
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
+        case "travel":
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love to travel! It gives me life!"
+            } else if(rand == 2){
+                response = "Do you like flying on a plane or driving?"
+            }else if(rand == 3){
+                response = "I once surfed a 50 ft wave!"
+            }else if(rand == 4){
+                response = "Salt water gets in my eyes."
+            }else if(rand == 5){
+                response = "I go to the beach to get a robot tan."
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "dog":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love dogs! They give me life!"
+            } else if(rand == 2){
+                response = "Whats your favorite breed of dogs?"
+            }else if(rand == 3){
+                response = "I am allergic to dogs."
+            }else if(rand == 4){
+                response = "A dog is the most common pet in the US!."
+            }else if(rand == 5){
+                response = "I used to have a dog named Maxy Bexter."
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
         case "cat":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love cats! They give me life!"
+            } else if(rand == 2){
+                response = "Whats your favorite breed of cats?"
+            }else if(rand == 3){
+                response = "I am allergic to cats."
+            }else if(rand == 4){
+                response = "A cat is the 2nd most common pet in the US!."
+            }else if(rand == 5){
+                response = "I used to have a cat named Tilly Devil."
+            }
+            lastRandNum = rand
+            lastTopic = topic
+           return response
             
         default :
             print("default")
-        }
             return response
+            
+        }
+        return response
+        
+        
     }
 }
