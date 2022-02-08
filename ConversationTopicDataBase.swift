@@ -58,12 +58,18 @@ public class ConversationTopicDataBase{
     
     var hobbies = ["PIANO", "ART", "GAMING","CHESS", "WOOD WORKING", "BAKING", "COOKING", "WRITING"]
     
+    var cat = ["CAT","CATS","KITTEN","KITTY","MEOW", "MEOWS","FELINE","TABBY","PUR","MOUSE","WISKER","MEW"]
+    
+    var dog = ["DOG","DOGS", "BARK","BARKS","PUPPY","DOGGY","WOLF","CANINE","HOUND","PUP","HOWL","DOGHOUSE","WALK","TREAT"]
+    
+    
+    
     init(){
         
     }
     
     func getArray() -> [[String]] {
-        let allWords = [sports, basketball, baseball, volleyball, hockey, football, soccer, swimming, running, school, classes, computerScience, math, english, history, science, media, netflix, reading, time, travel, hobbies]
+        let allWords = [sports, basketball, baseball, volleyball, hockey, football, soccer, swimming, running, school, classes, computerScience, math, english, history, science, media, netflix, reading, time, travel, hobbies, cat, dog]
         return allWords
     }
     
