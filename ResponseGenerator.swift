@@ -381,14 +381,19 @@ class ResponseGenerator {
             let rand = Int.random(in: 1 ... 5)
             if(rand == 1 && lastRandNum != rand){
                 response = "I love cats! They give me life!"
+                emotion = "happy"
             } else if(rand == 2){
                 response = "Whats your favorite breed of cats?"
+                emotion = "questioning"
             }else if(rand == 3){
                 response = "I am allergic to cats."
+                emotion = "sad"
             }else if(rand == 4){
                 response = "A cat is the 2nd most common pet in the US!."
+                emotion = "neutral"
             }else if(rand == 5){
                 response = "I used to have a cat named Tilly Devil."
+                emotion = "happy"
             }
             lastRandNum = rand
             lastTopic = topic
