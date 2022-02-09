@@ -149,7 +149,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
+        print(responseDataBase.likesArray)
         var sports = 0
         var basketball = 0
         var baseball = 0
@@ -172,6 +172,8 @@ class ViewController: UIViewController {
         var time = 0
         var travel = 0
         var hobbies = 0
+        var dog = 0
+        var cat = 0
         
         for topic in responseDataBase.likesArray{
             if(topic == convoVocabulary.sports){
@@ -218,15 +220,17 @@ class ViewController: UIViewController {
                 travel += 1
             } else if(topic == convoVocabulary.hobbies){
                 hobbies += 1
+            } else if(topic == convoVocabulary.cat){
+                print("in cat")
+                cat += 1
+            } else if(topic == convoVocabulary.dog){
+                print("in dog")
+                dog += 1
             }
         }
         
         var mostCount = 0
         
-        if(mostCount < sports){
-            mostCount = sports
-            currentTopic = "sports"
-        }
         if(mostCount < basketball){
             mostCount = basketball
             currentTopic = "basketball"
@@ -308,11 +312,22 @@ class ViewController: UIViewController {
             mostCount = hobbies
             currentTopic = "hobbies"
         }
-        
+        if(mostCount < dog){
+            mostCount = dog
+            currentTopic = "dog"
+        }
+        if(mostCount < cat){
+            mostCount = cat
+            currentTopic = "cat"
+        }
+        if(mostCount < sports && sports > basketball && sports > baseball && sports > soccer && sports > swimming && sports > hockey && sports > volleyball && sports > football && sports > running){
+            mostCount = sports
+            currentTopic = "sports"
+        }
+       
         print("Currently talking about \(currentTopic)")
         responseDataBase.topic = currentTopic
         
-        print(responseDataBase.likesArray)
         responseDataBase.resetLikes()
         AIresponse.text = responseDataBase.genResponse(array: wordArray)
     }
