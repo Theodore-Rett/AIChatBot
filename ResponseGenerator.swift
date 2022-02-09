@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ResponseGenerator {
     
@@ -271,7 +272,25 @@ class ResponseGenerator {
             lastTopic = topic
            return response
         case "math":
-            response = ""
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love math! It gives me life."
+                emotion = "happy"
+            } else if(rand == 2 && lastRandNum != rand){
+                response = "What's your favorite kind of math?"
+                emotion = "questioning"
+            } else if(rand == 3 && lastRandNum != rand){
+                response = "Algebra is the best!"
+                emotion = "surprised"
+            } else if(rand == 4 && lastRandNum != rand){
+                response = "Math can be tough at times, but if you keep pushing you'll make it through."
+                emotion = "calculating"
+            } else if(rand == 5 && lastRandNum != rand){
+                response = "MATH IS LIT!!!"
+                emotion = "surprised"
+            }
+            lastRandNum = rand
+            lastTopic = topic
         case "computer science":
             let rand = Int.random(in: 1 ... 5)
             if(rand == 1 && lastRandNum != rand){
@@ -398,7 +417,86 @@ class ResponseGenerator {
             lastRandNum = rand
             lastTopic = topic
            return response
-            
+        case "time":
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love time! It gives me life."
+                emotion = "happy"
+            } else if(rand == 2 && lastRandNum != rand){
+                response = "What season is it right now?"
+                emotion = "quesitoning"
+            } else if(rand == 3 && lastRandNum != rand){
+                response = "My favorite season is winter."
+                emotion = "happy"
+            } else if(rand == 4 && lastRandNum != rand){
+                response = "I don't like the spring, all the rain makes my gears freeze up."
+                emotion = "sad"
+            } else if(rand == 5 && lastRandNum != rand){
+                response = "What's your favorite season?"
+                emotion = "questioning"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+        case "sports" :
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love sports! They give me life."
+                emotion = "happy"
+            } else if(rand == 2 && lastRandNum != rand){
+                response = "What's your favorite sport?"
+                emotion = "quesitoning"
+            } else if(rand == 3 && lastRandNum != rand){
+                response = "GOAAAAAALLLL!!!"
+                emotion = "surprised"
+            } else if(rand == 4 && lastRandNum != rand){
+                response = "I've always liked hockey."
+                emotion = "neutral"
+            } else if(rand == 5 && lastRandNum != rand){
+                response = "Be sure to practice good sportsmenship when playing."
+                emotion = "happy"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+        case "english":
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love english! It gives me life."
+                emotion = "happy"
+            } else if(rand == 2 && lastRandNum != rand){
+                response = "What are you studying in english now?"
+                emotion = "quesitoning"
+            } else if(rand == 3 && lastRandNum != rand){
+                response = "I've alwayed love studing literature!"
+                emotion = "happy"
+            } else if(rand == 4 && lastRandNum != rand){
+                response = "What's your favorite book for class?"
+                emotion = "questioning"
+            } else if(rand == 5 && lastRandNum != rand){
+                response = "Englsih is fun!!!"
+                emotion = "surprised"
+            }
+            lastRandNum = rand
+            lastTopic = topic
+        case "hobbies":
+            let rand = Int.random(in: 1 ... 5)
+            if(rand == 1 && lastRandNum != rand){
+                response = "I love my hobbies! They gives me life."
+                emotion = "happy"
+            } else if(rand == 2 && lastRandNum != rand){
+                response = "I like to play piano in my free time."
+                emotion = "neutral"
+            } else if(rand == 3 && lastRandNum != rand){
+                response = "What are some of your hobbies?"
+                emotion = "questioning"
+            } else if(rand == 4 && lastRandNum != rand){
+                response = "Everyone has their own hobbies, it's great!"
+                emotion = "happy"
+            } else if(rand == 5 && lastRandNum != rand){
+                response = "Do you like to play any games?"
+                emotion = "questioning"
+            }
+            lastRandNum = rand
+            lastTopic = topic
         default :
             print("default")
             return response
