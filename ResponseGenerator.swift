@@ -50,7 +50,7 @@ class ResponseGenerator {
                 emotion = "greeting"
                 return aiResponse
             } //hi
-            if likesArray.count == 0 && interests.count != 0 && topic == ""{
+            if likesArray.count == 0 && interests.count != 0 && topic == "" {
             
             let randNum: Int = Int.random(in: 0...interests.count-1)
             
@@ -60,10 +60,9 @@ class ResponseGenerator {
         return aiResponse
             
             } else {
-                if likesArray.count == 0 {
-                    aiResponse = "Please be more specific and update your interests for your profile!"
+                if topic != "" {
                     emotion = "neutral"
-                    return aiResponse
+                    return randTopicResponse(topic: topic)
                 }
                 }
             }
@@ -103,11 +102,12 @@ class ResponseGenerator {
     
     func randTopicResponse(topic: String) -> String {
         var response = ""
-        
+        print("topic is \(topic)")
         switch topic {
             
         case "basketball":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to play basketball! It gives me life!"
                 emotion = "happy"
@@ -124,11 +124,18 @@ class ResponseGenerator {
                 response = "SLAM DUNK!"
                 emotion = "surprised"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "baseball":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to play baseball! It gives me life!"
                 emotion = "happy"
@@ -145,11 +152,18 @@ class ResponseGenerator {
                 response = "HOME RUN!"
                 emotion = "greeting"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "hockey":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to play hockey! It gives me life!"
                 emotion = "happy"
@@ -166,11 +180,18 @@ class ResponseGenerator {
                 response = "GOAL!"
                 emotion = "surprised"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "football":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to play football! It gives me life!"
                 emotion = "happy"
@@ -187,11 +208,18 @@ class ResponseGenerator {
                 response = "TOUCHDOWN!"
                 emotion = "surprised"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "track":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to run track! It gives me life!"
                 emotion = "happy"
@@ -208,11 +236,18 @@ class ResponseGenerator {
                 response = "I got first place!"
                 emotion = "surprised"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "soccer":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to play soccer! It gives me life!"
                 emotion = "happy"
@@ -229,11 +264,18 @@ class ResponseGenerator {
                 response = "GOAL!"
                 emotion = "surprised"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "swim":
-            let rand = Int.random(in: 1 ... 4)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to go swimming! It gives me life!"
                 emotion = "happy"
@@ -247,11 +289,18 @@ class ResponseGenerator {
                 response = "Swimming is super fun!"
                 emotion = "surprised"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "volleyball":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to play volleyball! It gives me life!"
                 emotion = "happy"
@@ -268,6 +317,12 @@ class ResponseGenerator {
                 response = "I play sand volleyball."
                 emotion = "neutral"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
@@ -292,7 +347,8 @@ class ResponseGenerator {
             lastRandNum = rand
             lastTopic = topic
         case "computer science":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love computer science! It gives me life!"
                 emotion = "happy"
@@ -309,11 +365,18 @@ class ResponseGenerator {
                 response = "Mr Seaver is a lit computer science teacher!"
                 emotion = "happy"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "reading":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && (lastRandNum != rand && lastTopic == topic)){
                 response = "I love to read! It gives me life!"
                 emotion = "happy"
@@ -330,11 +393,18 @@ class ResponseGenerator {
                 response = "I read in my free time!"
                 emotion = "happy"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "netflix":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to watch netflix! It gives me life!"
                 emotion = "happy"
@@ -351,11 +421,18 @@ class ResponseGenerator {
                 response = "I like baking shows so that I can make myself some scrumptious robot deserts."
                 emotion = "greeting"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "travel":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love to travel! It gives me life!"
                 emotion = "happy"
@@ -372,48 +449,68 @@ class ResponseGenerator {
                 response = "I go to the beach to get a robot tan."
                 emotion = "happy"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "dog":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love dogs! They give me life!"
                 emotion = "happy"
-            } else if(rand == 2){
+            } else if(rand == 2 && lastRandNum != rand){
                 response = "Whats your favorite breed of dogs?"
                 emotion = "questioning"
-            }else if(rand == 3){
+            }else if(rand == 3 && lastRandNum != rand){
                 response = "I am allergic to dogs."
                 emotion = "sad"
-            }else if(rand == 4){
+            }else if(rand == 4 && lastRandNum != rand){
                 response = "A dog is the most common pet in the US!."
                 emotion = "happy"
-            }else if(rand == 5){
+            }else if(rand == 5 && lastRandNum != rand){
                 response = "I used to have a dog named Maxy Bexter."
                 emotion = "neutral"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
         case "cat":
-            let rand = Int.random(in: 1 ... 5)
+            var rand = Int.random(in: 1 ... 5)
+            repeat {
             if(rand == 1 && lastRandNum != rand){
                 response = "I love cats! They give me life!"
                 emotion = "happy"
-            } else if(rand == 2){
+            } else if(rand == 2 && lastRandNum != rand){
                 response = "Whats your favorite breed of cats?"
                 emotion = "questioning"
-            }else if(rand == 3){
+            }else if(rand == 3 && lastRandNum != rand){
                 response = "I am allergic to cats."
                 emotion = "sad"
-            }else if(rand == 4){
-                response = "A cat is the 2nd most common pet in the US!."
+            }else if(rand == 4 && lastRandNum != rand){
+                response = "A cat is the 2nd most common pet in the US!"
                 emotion = "neutral"
-            }else if(rand == 5){
+            }else if(rand == 5 && lastRandNum != rand){
                 response = "I used to have a cat named Tilly Devil."
                 emotion = "happy"
             }
+                if response == "" {
+                    rand = Int.random(in: 1 ... 5)
+                } else {
+                    break
+                }
+            } while true;
             lastRandNum = rand
             lastTopic = topic
            return response
